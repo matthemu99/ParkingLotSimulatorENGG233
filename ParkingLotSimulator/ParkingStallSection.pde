@@ -1,3 +1,6 @@
+// #Author: Matthew M.
+// #Author: Phillip M.
+
 class ParkingStallSection {
   ParkingStall [][] stallList;
   float x, y;

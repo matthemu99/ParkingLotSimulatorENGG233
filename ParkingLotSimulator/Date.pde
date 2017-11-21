@@ -1,3 +1,6 @@
+// #Author: Matthew M.
+// #Author: Phillip M.
+
 class Date {
   final String [] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
   int today;

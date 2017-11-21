@@ -1,3 +1,6 @@
+// #Author: Matthew M.
+// #Author: Phillip M.
+
 class ParkingStall {
   // STALL ATTRIBUTES
   boolean occupied;

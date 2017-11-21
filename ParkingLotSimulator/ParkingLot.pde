@@ -1,3 +1,6 @@
+// #Author: Matthew M.
+// #Author: Phillip M.
+
 class ParkingLot{
  ParkingStallSection [] sectionList = new ParkingStallSection[5];
 
