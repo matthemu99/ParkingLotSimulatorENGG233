@@ -11,6 +11,12 @@ ParkingLot park;
 
 void setup() {
 size(1100,700);
+
+background(#059505);
+strokeWeight(5);
+stroke(255);
+fill(#6A6C6C);
+rect(100,125,900,450);
 park = new ParkingLot();
 park.drawLot();
 
