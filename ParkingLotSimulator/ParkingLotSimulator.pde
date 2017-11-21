@@ -16,7 +16,7 @@ background(#059505);
 strokeWeight(5);
 stroke(255);
 fill(#6A6C6C);
-rect(100,125,900,450);
+rect(125,125,850,450);
 park = new ParkingLot();
 park.drawLot();
 
