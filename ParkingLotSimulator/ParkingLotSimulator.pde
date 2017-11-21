@@ -8,6 +8,10 @@ ParkingLot park;
 void setup() {
 size(1100,700);
 park = new ParkingLot();
+park.drawLot();
+
+
+//park.drawSection();
 //ParkingStall(1.0,1.0,1.0,1.0)
 }
 
