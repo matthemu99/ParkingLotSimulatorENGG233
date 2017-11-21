@@ -1,19 +1,30 @@
 class ParkingStallSection {
-  ParkingStall [] stallList;
+  ParkingStall [][] stallList;
   float x, y;
   int row, col;
 
-  ParkingStallSection(float x, float y,int row, int col) {
-    stallList = new ParkingStall [row*col];
+  ParkingStallSection(int row, int col, float x, float y) {
+    stallList = new ParkingStall [row][col];
     this.row = row;
     this.col = col;
     this.x = x;
     this.y = y;
+
+
+
+    for (int i = 0; i < row; i++) {
+      for (int j = 0; j < col; j++) {
+        float xCoor = x+100*i;
+        float yCoor = y+50*j;
+        stallList[i][j] = new ParkingStall(xCoor, yCoor, 100, 50); // width and height, 100, 50 respectively
+      }
+    }
   }
   void drawSection() {
-    for (int i =0; i < 10; i++) {
-      stallList[i] = new ParkingStall(x,y , row, col);
-      stallList[i].drawStall();
+    for (int i =0; i < 5; i++) {
+      for (int j = 0; j < 2; j++) { //stallList[i] = new ParkingStall(x,y , row, col);
+        stallList[i][j].drawStall();
+      }
     }
   }
 }
