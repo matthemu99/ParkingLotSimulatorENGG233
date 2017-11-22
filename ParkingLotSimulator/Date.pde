@@ -13,10 +13,10 @@ class Date {
     if ( h%12 ==0 && before_noon == false && m< 60) {
       hour = h;
     } else {
-      hour = h%12;}
-      minute = m%60;
-      before_noon = beforeNoon;
-    
+      hour = h%12;
+    }
+    minute = m%60;
+    before_noon = beforeNoon;
   }
   Date(Date d) {
     today = d.today;

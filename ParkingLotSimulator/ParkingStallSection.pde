@@ -20,13 +20,13 @@ class ParkingStallSection {
         float height = 50;
         float xCoor = x+(width*i);
         float yCoor = y+(height*j);
-        stallList[i][j] = new ParkingStall(xCoor , yCoor, width, height); // width and height, 100, 50 respectively
+        stallList[i][j] = new ParkingStall(xCoor, yCoor, width, height); // width and height, 70, 50 respectively
       }
     }
   }
   void drawSection() {
     for (int i =0; i < col; i++) {
-      for (int j = 0; j < row; j++) { //stallList[i] = new ParkingStall(x,y , row, col);
+      for (int j = 0; j < row; j++) { 
         stallList[i][j].drawStall();
       }
     }
