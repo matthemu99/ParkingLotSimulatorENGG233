@@ -8,7 +8,7 @@ class ParkingLot {
   ParkingLot() {
     for (int i = 0; i < 2; i++) {
       for (int j = 0; j< 3; j++) {
-        sectionList[i][j] = new ParkingStallSection(2, 5, 175 + (i *400), 150 + (j*150)); //(int row, int col, float x, float y)
+        sectionList[i][j] = new ParkingStallSection(2, 5, 175 + (i *400), 200 + (j*140)); //(int row, int col, float x, float y)
       }
     }
   }

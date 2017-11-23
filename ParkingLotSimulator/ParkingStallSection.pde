@@ -16,8 +16,8 @@ class ParkingStallSection {
 
     for (int i = 0; i < col; i++) {
       for (int j = 0; j < row; j++) {
-        float width = 70;
-        float height = 50;
+        float width = 70; //70
+        float height = 45; //50
         float xCoor = x+(width*i);
         float yCoor = y+(height*j);
         stallList[i][j] = new ParkingStall(xCoor, yCoor, width, height); // width and height, 70, 50 respectively

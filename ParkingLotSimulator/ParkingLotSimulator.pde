@@ -3,8 +3,8 @@
 
 
 ParkingLot park;
-//Street northStreet;
-//Street southStreet;
+Street northStreet; 
+Street southStreet; 
 //PriceCalculator cost;
 //etc... 
 
@@ -15,9 +15,13 @@ void setup() {
   strokeWeight(5);
   stroke(255);
   fill(#6A6C6C);
-  rect(125, 125, 850, 450);
+  rect(150, 172.5, 800, 425);
   park = new ParkingLot();
   park.drawLot();
+  southStreet = new Street("south");
+  northStreet= new Street("north");
+  southStreet.drawStreet();
+  northStreet.drawStreet();
 }
 
 void draw() {
