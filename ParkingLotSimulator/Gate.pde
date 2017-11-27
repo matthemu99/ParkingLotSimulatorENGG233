@@ -10,7 +10,7 @@ class Gate{
    
    
    void openGate() {
-     
+     //
    }
    
    void closeGate() {
