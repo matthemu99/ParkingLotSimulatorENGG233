@@ -4,6 +4,7 @@ class Time{
   
   
   void addTime(){
+
     time.addMinute();
     day = time.toString();
     println(day);
