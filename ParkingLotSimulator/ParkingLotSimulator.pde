@@ -35,25 +35,7 @@ void setup() {
 }
 
 void draw() {
-  /*clock(timeCounter++);
-  println(currentDate, timeElapsed);
-}
-int timeCounter =0;
-int timeElapsed = 0;
-int counter = 0;
-
-void clock(int t) {
-
-  float increment = 0.025; 
-  if (t >= 40*increment) {
-    currentDate.addMinute();
-    if (counter == 60) {
-      timeElapsed++;
-      counter = 0;
-    }
-
-    counter ++;
-    timeCounter = 0;
-  }*/
+  
  clock.addTime();
+ clock.timeElapsed(totalTime++);
 }
