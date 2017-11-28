@@ -12,24 +12,25 @@ class Gate {
     this.spaces = spaces;
     textSize(10);
     textAlign(LEFT);
+    stroke (0);
+    
+    strokeWeight(3);
+    fill(#516AE0);
+    rect(PosX -100, PosYN-20, 92, 32);
+    fill(255 );
+    rect(PosX -100, PosYN-20, 92, 16);
+    fill(0);
+    text("ENTRANCE", PosX-95, PosYN-8); 
+    text("Space:  " + spaces, PosX-95, PosYN+8); 
 
     strokeWeight(3);
     fill(#516AE0);
-    rect(PosX, PosYN, 92, 32);
+    rect(PosX -100, PosYN+415, 92, 32);
     fill(255 );
-    rect(PosX, PosYN, 92, 16);
+    rect(PosX -100, PosYN+415, 92, 16);
     fill(0);
-    text("ENTRANCE", PosX+16, PosYN+13); 
-    text("Space:  " + spaces, PosX+14, PosYN+28); 
-
-    strokeWeight(3);
-    fill(#516AE0);
-    rect(PosX, PosYN+500, 92, 32);
-    fill(255 );
-    rect(PosX, PosYN+500, 92, 16);
-    fill(0);
-    text("EXIT", PosX+30, PosYN+513); 
-    text("Fee = $" + fee, PosX+15, PosYN+528);
+    text("EXIT", PosX-95, PosYN+428); 
+    text("Fee = $" + fee, PosX-95, PosYN+443);
   }
 
 
