@@ -41,6 +41,10 @@ class Date {
      else if (hour == 12) { 
       hour =1;
     }
+    totalTime++;
+    if(today==7){
+      today=0;
+    }
   }
   void addMinute() {
     minute++;

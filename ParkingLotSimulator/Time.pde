@@ -7,6 +7,7 @@ class Time{
     time.addMinute();
     day = time.toString();
     println(day);
+    println(totalTime);
   
 }
 
