@@ -11,6 +11,7 @@ Time clock;
 int totalTime;
 int timer = 0;
 int timeElapsed =0;
+Car car;
 
 //PriceCalculator cost;
 //etc... 
@@ -41,4 +42,7 @@ void draw() {
  clock.addTime();
  clock.timeElapsed(timer++);
  print(timeElapsed);
+ car = new Car();
+ car.carDrive();
+ 
 }

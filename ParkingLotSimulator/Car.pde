@@ -1,15 +1,15 @@
 // #Author: Matthew M.
 // #Author: Phillip M.
 
-class car{
+class Car{
 
 
 float r = random(0, 250);
 float g = random(0, 250);
 float b = random(0, 250);
 
-
-for(int x=0,x<1200,x++){
+void carDrive(){
+for(int x=0;x<1200;x++){
   
  fill(r,g,b);
  stroke(0);
@@ -26,6 +26,7 @@ line(x+20,129,x+27,129);
 fill(#FCFC1F);
 ellipse(x+33,110,3,3);
 ellipse(x+33,122,3,3);
+}
 }
 
 }
