@@ -29,14 +29,14 @@ class Date {
 
     if (  hour < 11 ) {
       hour++;
+    } else if (hour ==11 && minute == 59&& before_noon == false) {////
+      addDay() ;
+      hour = 1;
+      before_noon= true;
+      minute = 0;///
     } else if (hour == 11 && before_noon ==true) {
       before_noon = !before_noon;
       hour++;
-    } else if (hour ==11 && minute == 59&& before_noon == true) {////
-      addDay() ;
-      hour = 1;
-      before_noon= false;
-      minute = 0;///
     } else if (hour == 12) { 
       hour =1;
     }
