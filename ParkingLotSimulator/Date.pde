@@ -32,6 +32,11 @@ class Date {
     } else if (hour == 11 && before_noon ==true) {
       before_noon = !before_noon;
       hour++;
+    } else if (hour ==11 && minute == 59&& before_noon == true) {////
+      addDay() ;
+      hour = 1;
+      before_noon= false;
+      minute = 0;///
     } else if (hour == 12) { 
       hour =1;
     }
@@ -41,6 +46,13 @@ class Date {
     if (minute == 60) {
       minute = 0;
       addHour();
+    }
+  }
+  void addDay() {
+    if (today<=7) { 
+      today=5;
+    } else {
+      today=6;
     }
   }
 

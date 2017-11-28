@@ -5,6 +5,8 @@ ParkingLot park;
 Street northStreet; 
 Street southStreet; 
 Gate parkGate;
+Date currentDate;
+
 //PriceCalculator cost;
 //etc... 
 
@@ -23,22 +25,30 @@ void setup() {
   northStreet= new Street("north");
   southStreet.drawStreet();
   northStreet.drawStreet();
-  parkGate = new Gate();
-  parkGate.closeGate();
+  currentDate = new Date(0, 1, 0, true);
+  // parkGate = new Gate();
+  // parkGate.closeGate();
 }
 
 void draw() {
-  clock(timeCounter);
-  println(totalHour);
+  clock(timeCounter++);
+  println(currentDate, timeElapsed);
 }
 int timeCounter =0;
-int totalHour =0;
-void clock(int t) {
-  int increment = 3;  //how many seconds it takes to count up a new hour
-  if (t >= 40*increment) {
+int timeElapsed = 0;
+int counter = 0;
 
-    totalHour += 1;
+void clock(int t) {
+
+  float increment = 0.025; 
+  if (t >= 40*increment) {
+    currentDate.addMinute();
+    if (counter == 60) {
+      timeElapsed++;
+      counter = 0;
+    }
+
+    counter ++;
     timeCounter = 0;
   }
-  timeCounter++;
 }
