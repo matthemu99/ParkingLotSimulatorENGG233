@@ -34,8 +34,8 @@ void draw() {
 int timeCounter =0;
 int totalHour =0;
 void clock(int t) {
-
-  if (t >= 40) {
+  int increment = 3;  //how many seconds it takes to count up a new hour
+  if (t >= 40*increment) {
 
     totalHour += 1;
     timeCounter = 0;
