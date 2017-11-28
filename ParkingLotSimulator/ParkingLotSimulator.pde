@@ -31,7 +31,7 @@ void setup() {
   currentDate = new Date(0, 1, 0, true);
   clock = new Time();
   parkGate = new Gate(78,60);
-  // parkGate.closeGate();
+   parkGate.closeGate();
 }
 
 void draw() {
