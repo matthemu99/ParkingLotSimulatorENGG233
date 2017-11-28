@@ -29,10 +29,16 @@ class Date {
 
     if (  hour < 11 ) {
       hour++;
-    } else if (hour == 11 && before_noon ==true) {
+    } else if (hour == 11 && before_noon ==false) {
       before_noon = !before_noon;
       hour++;
-    } else if (hour == 12) { 
+      today++;
+    }
+      else if(hour == 11 && before_noon == true){
+        before_noon = !before_noon;
+        hour++;
+      }
+     else if (hour == 12) { 
       hour =1;
     }
   }

@@ -1,11 +1,14 @@
 // #Author: Matthew M.
 // #Author: Phillip M.
 //
+Date time = new Date (0,0,0,true);
 ParkingLot park;
 Street northStreet; 
 Street southStreet; 
 Gate parkGate;
 Date currentDate;
+Time clock;
+int totalTime;
 
 //PriceCalculator cost;
 //etc... 
@@ -26,12 +29,13 @@ void setup() {
   southStreet.drawStreet();
   northStreet.drawStreet();
   currentDate = new Date(0, 1, 0, true);
+  clock = new Time();
   // parkGate = new Gate();
   // parkGate.closeGate();
 }
 
 void draw() {
-  clock(timeCounter++);
+  /*clock(timeCounter++);
   println(currentDate, timeElapsed);
 }
 int timeCounter =0;
@@ -50,5 +54,6 @@ void clock(int t) {
 
     counter ++;
     timeCounter = 0;
-  }
+  }*/
+ clock.addTime();
 }
