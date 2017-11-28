@@ -2,25 +2,33 @@
 // #Author: Phillip M.
 class Gate {
   boolean status = false;
-  int posX;
-  int posY;
-
+  int PosX;
+  int PosY;
   float fee;
-
-  Gate( int x, int y   ) {
-    this.posX = x;
-    this.posY = y;
-    
-if (status ==
-
-}
-
-
+  
+ 
   void openGate() {
     status = true;
+    strokeWeight(5);
+    stroke(0);
+    line(530, 172, 560, 145);
+    line(530, 597, 560, 570);
+    noStroke();
+    fill(#11E000);
+    ellipse(530, 172, 5, 5);
+    ellipse(530, 597, 5, 5);
   }
 
   void closeGate() {
     status = false;
+    strokeWeight(5);
+    stroke(0);
+    line(530, 172, 570, 172);
+    line(530, 597, 560, 570);
+    noStroke();
+    fill(#F21800);
+    ellipse(530, 172, 5, 5);
+    fill(#11E000);
+    ellipse(530, 597, 5, 5);
   }
 }
