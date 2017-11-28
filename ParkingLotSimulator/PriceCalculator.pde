@@ -7,12 +7,12 @@ class PriceCalculator {
   float hour;
   float hoursElapsed;
   boolean beforeNoon;
-  PriceCalculator(Date current) {
+  PriceCalculator(Date current , int hoursElapsed) {
 
     this.day = current.today;
     this.hour = current.hour;
     this.beforeNoon = current.before_noon;
-    this.hoursElapsed = hour - (hour -1);
+    this.hoursElapsed = hoursElapsed;
   }
 
   void parkingFee() {
