@@ -7,10 +7,9 @@ Street southStreet;
 Gate parkGate;
 //PriceCalculator cost;
 //etc... 
-int x = 0;
-float r = random(0,250);
-float g = random(0,250);
-float b = random(0,250);
+
+
+
 void setup() {
   size(1100, 700);
   background(#059505);
@@ -29,9 +28,7 @@ void setup() {
   //strokeWeight(5);
   //stroke(#ED0800);
   //line(200,145,200,85);
-  
 }
 
 void draw() {
-  
 }

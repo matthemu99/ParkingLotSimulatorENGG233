@@ -3,6 +3,10 @@
 
 
 /*
+int x = 0;
+float r = random(0, 250);
+float g = random(0, 250);
+float b = random(0, 250);
 
 
 
