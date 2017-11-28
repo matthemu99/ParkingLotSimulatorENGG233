@@ -9,6 +9,8 @@ Gate parkGate;
 Date currentDate;
 Time clock;
 int totalTime;
+int timer = 0;
+int timeElapsed =0;
 
 //PriceCalculator cost;
 //etc... 
@@ -37,5 +39,6 @@ void setup() {
 void draw() {
   
  clock.addTime();
- clock.timeElapsed(totalTime++);
+ clock.timeElapsed(timer++);
+ print(timeElapsed);
 }
