@@ -30,7 +30,7 @@ void setup() {
   northStreet.drawStreet();
   currentDate = new Date(0, 1, 0, true);
   clock = new Time();
-  // parkGate = new Gate();
+  parkGate = new Gate(78,78);
   // parkGate.closeGate();
 }
 
