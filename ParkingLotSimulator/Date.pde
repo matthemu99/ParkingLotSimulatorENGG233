@@ -29,11 +29,6 @@ class Date {
 
     if (  hour < 11 ) {
       hour++;
-    } else if (hour ==11 && minute == 59&& before_noon == false) {////
-      addDay() ;
-      hour = 1;
-      before_noon= true;
-      minute = 0;///
     } else if (hour == 11 && before_noon ==true) {
       before_noon = !before_noon;
       hour++;
@@ -48,13 +43,7 @@ class Date {
       addHour();
     }
   }
-  void addDay() {
-    if (today<=7) { 
-      today=5;
-    } else {
-      today=6;
-    }
-  }
+
 
   String toString() {
     String date = days[today];
