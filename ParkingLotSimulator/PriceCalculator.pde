@@ -12,13 +12,13 @@ class PriceCalculator{
     this.day = current.today;
     this.hour = current.hour;
     
-    this.before
+    this.beforeNoon = current.before_noon;
     
     
   }
   
   void parkingFee(){
-    if(day <=5)
+    if(day <=5);
     
     
     
