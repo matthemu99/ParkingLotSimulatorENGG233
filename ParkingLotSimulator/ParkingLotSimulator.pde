@@ -1,6 +1,5 @@
 // #Author: Matthew M.
 // #Author: Phillip M.
-//yo dude
 
 ParkingLot park;
 Street northStreet; 
