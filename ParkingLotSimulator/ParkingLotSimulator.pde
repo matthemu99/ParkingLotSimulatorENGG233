@@ -25,10 +25,20 @@ void setup() {
   northStreet.drawStreet();
   parkGate = new Gate();
   parkGate.closeGate();
-  //strokeWeight(5);
-  //stroke(#ED0800);
-  //line(200,145,200,85);
 }
 
 void draw() {
+  clock(timeCounter);
+  println(totalHour);
+}
+int timeCounter =0;
+int totalHour =0;
+void clock(int t) {
+
+  if (t >= 40) {
+
+    totalHour += 1;
+    timeCounter = 0;
+  }
+  timeCounter++;
 }
