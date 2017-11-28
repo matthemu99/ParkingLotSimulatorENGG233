@@ -2,9 +2,8 @@
 // #Author: Phillip M.
 
 class PriceCalculator{
-  
+  float price;
   int day;
-  //float hoursElapsed;
   float hour;
   boolean beforeNoon;
   PriceCalculator(Date current){
@@ -18,7 +17,11 @@ class PriceCalculator{
   }
   
   void parkingFee(){
-    if(day <=5);
+    if(day <=5 && beforeNoon == true){
+     // this.price = hour * 
+      
+      
+    }
     
     
     

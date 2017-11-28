@@ -23,8 +23,8 @@ class Gate {
     status = false;
     strokeWeight(5);
     stroke(0);
-    line(530, 172, 570, 172);
-    line(530, 597, 560, 570);
+    line(530, 172, 570, 172);  // 530 // 172
+    line(530, 597, 560, 570);  // 530 // 597
     noStroke();
     fill(#F21800);
     ellipse(530, 172, 5, 5);
