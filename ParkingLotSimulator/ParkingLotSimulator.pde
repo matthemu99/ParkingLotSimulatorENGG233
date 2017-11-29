@@ -1,6 +1,7 @@
 // #Author: Matthew M.
 // #Author: Phillip M.
 //
+import java.util.Arrays;
 Date time = new Date (0, 0, 0, true);
 ParkingLot park;
 Street northStreet; 
@@ -32,22 +33,22 @@ void setup() {
   clock = new Time();
   parkGate = new Gate(78, 60);
   parkGate.closeGate();
-  for (int i = 0; i < 20; i++) {
-    cars[i] = new Car((int)random(1, 2000)*-1, 1);
+  
+  for (int i = 0, j =0; i < 60; i++, j-= 150) {
+   //cars = Arrays.copyOf(cars,cars.length +i);
+    cars[i] = new Car(j + (int)random(1, 100)*-1, 1);
   }
 }
 
 void draw() {
   rePaint();
-parkGate.closeGate();
+  parkGate.closeGate();
   clock.addTime();
   clock.timeElapsed(timer++);
 
-  for (int i = 0; i< 20; i++) {
+  for (int i = 0; i< 60; i++) {
     cars[i].moveCar();
   }
-  
-  
 }
 void rePaint() {
   background(#059505);
