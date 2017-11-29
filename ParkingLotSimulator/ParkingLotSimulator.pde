@@ -38,7 +38,7 @@ void setup() {
   currentDate = new Date(0, 1, 0, true);
   clock = new Time();
   parkGate = new Gate(78, 60);
-  parkGate.closeGate();
+  parkGate.openGate();
   panel = new ControlPanel("");
   for (int i = 0, j =0; i < 60; i++, j-= 150) {
     cars[i] = new Car(j + (int)random(1, 100)*-1, 1);
@@ -56,7 +56,7 @@ void setup() {
 
 void draw() {
   rePaint();
-  parkGate.closeGate();
+  parkGate.openGate();
   clock.addTime();
   clock.timeElapsed(timer++);
   panel = new ControlPanel(clock.day);
