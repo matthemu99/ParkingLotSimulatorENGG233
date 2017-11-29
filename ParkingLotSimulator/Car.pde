@@ -16,7 +16,7 @@ class Car {
     g = random(0, 255);
     b = random(0, 255);
   }
-  void moveCar() {
+  private void moveCar() {
     this.x += this.speed;
   }
 
