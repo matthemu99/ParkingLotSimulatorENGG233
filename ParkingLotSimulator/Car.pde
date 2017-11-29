@@ -8,7 +8,7 @@ class Car {
 
   int speed = 0;
   int x = 0;
-
+  int y = 0;
   Car(int x, int speed) {
     this.speed = speed;
     this.x = x;
@@ -16,13 +16,43 @@ class Car {
     g = random(0, 255);
     b = random(0, 255);
   }
-  private void moveCar() {
+  void moveCar() {
     this.x += this.speed;
   }
+  
+ 
+  void rotateCar(){
+        rotate(PI/2.0);
+
+    
+  }
+  
+  
+  
+  
 
   void drawCar() {
-    moveCar(); 
+
     fill(r, g, b);
+    stroke(0);
+    strokeWeight(1);
+    rect(x, 103+y, 35, 25);
+    fill(#83D7F0);
+    rect(x+5, 108+y, 7, 15);
+    rect(x+20, 108+y, 7, 15);
+    fill(0);
+    line(x+5, 102+y, x+12, 102+y);
+    line(x+5, 129+y, x+12, 129+y);
+    line(x+20, 102+y, x+27, 102+y);
+    line(x+20, 129+y, x+27, 129+y);
+    fill(#FCFC1F);
+    ellipse(x+33, 110+y, 3, 3);
+    ellipse(x+33, 122+y, 3, 3);
+  }
+}
+
+/*
+  fill(r, g, b);
     stroke(0);
     strokeWeight(1);
     rect(x, 103, 35, 25);
@@ -37,5 +67,5 @@ class Car {
     fill(#FCFC1F);
     ellipse(x+33, 110, 3, 3);
     ellipse(x+33, 122, 3, 3);
-  }
-}
+
+*/

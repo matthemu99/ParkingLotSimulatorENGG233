@@ -37,7 +37,7 @@ void setup() {
   northStreet.drawStreet();
   currentDate = new Date(0, 1, 0, true);
   clock = new Time();
-  parkGate = new Gate(78, 60);
+  parkGate = new Gate(0, 60);
   parkGate.openGate();
   panel = new ControlPanel("");
   for (int i = 0, j =0; i < 60; i++, j-= 150) {
@@ -63,6 +63,8 @@ void draw() {
 
   for (int i = 0; i< 60; i++) {
     cars[i].drawCar();
+    cars[i].moveCar();
+    cars[1].rotateCar();
   }
 }
 
