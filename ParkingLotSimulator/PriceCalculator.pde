@@ -2,11 +2,12 @@
 // #Author: Phillip M.
 
 class PriceCalculator {
-
-  PriceCalculator(Date enter, Date exit) {
-    int counter = 0;
-    float cost = 0;
-
+int counter;
+  
+  
+  
+  
+void CalculatePrice(Date enter, Date exit){
     while (enter != exit) {
 
       if (counter<60) {
