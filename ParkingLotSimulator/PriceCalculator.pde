@@ -2,13 +2,18 @@
 // #Author: Phillip M.
 
 class PriceCalculator {
-int counter;
-  
-  
-  
-  
-void CalculatePrice(Date enter, Date exit){
-    while (enter != exit) {
+  Date enter;
+  Date exit;
+  int cost;
+
+  PriceCalculator(Date enter, Date exit) {
+    this.enter = enter;
+    this.exit = exit;
+  }
+
+  int counter =0;
+  double calculateFee() {
+    while (enter.equal( exit) == false) {
 
       if (counter<60) {
         enter.addMinute();
@@ -23,5 +28,7 @@ void CalculatePrice(Date enter, Date exit){
         enter.addMinute();
       }
     }
+
+    return cost;
   }
 }

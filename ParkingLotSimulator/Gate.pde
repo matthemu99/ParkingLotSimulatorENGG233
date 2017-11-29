@@ -13,7 +13,7 @@ class Gate {
     textSize(10);
     textAlign(LEFT);
     stroke (0);
-    
+
     strokeWeight(3);
     fill(#516AE0);
     rect(PosX -100, PosYN-20, 92, 32);

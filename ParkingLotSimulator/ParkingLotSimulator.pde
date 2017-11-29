@@ -13,10 +13,14 @@ int totalTime;
 int timer = 0;
 int timeElapsed =0;
 Car cars[] = new Car[60];
+PriceCalculator cost;
 
-//PriceCalculator cost;
-//etc... 
 
+///////// TO BE DELETED!!/////////////
+
+Date date1 = new Date(2, 3, 3, true);
+Date date2 = new Date(2, 6, 5, true);
+/////////
 
 
 void setup() {
@@ -33,11 +37,20 @@ void setup() {
   clock = new Time();
   parkGate = new Gate(78, 60);
   parkGate.closeGate();
-  
+
   for (int i = 0, j =0; i < 60; i++, j-= 150) {
-   //cars = Arrays.copyOf(cars,cars.length +i);
+    //cars = Arrays.copyOf(cars,cars.length +i);
     cars[i] = new Car(j + (int)random(1, 100)*-1, 1);
   }
+  ///////////TEST AREA/////////////////////////
+
+  cost = new PriceCalculator (date1, date2);
+  print( cost.calculateFee());
+
+
+
+
+  /////////////////////////////////////////////
 }
 
 void draw() {
@@ -46,10 +59,16 @@ void draw() {
   clock.addTime();
   clock.timeElapsed(timer++);
 
+
   for (int i = 0; i< 60; i++) {
     cars[i].moveCar();
   }
 }
+
+
+
+
+
 void rePaint() {
   background(#059505);
   park.drawLot();

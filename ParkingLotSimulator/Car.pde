@@ -35,5 +35,4 @@ class Car {
     ellipse(x+33, 110, 3, 3);
     ellipse(x+33, 122, 3, 3);
   }
- 
 }
