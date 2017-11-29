@@ -2,32 +2,25 @@
 // #Author: Phillip M.
 
 class PriceCalculator {
-  float price;
-  int dayOut;
-  float hourOut;
-  float hoursElapsed;
-  boolean beforeNoonOut;
-  int dayIn;
-  float hourIn;
-  boolean beforeNoonIn;
-  float stallHour;
-  float stallDay;
-  
-  // (out, in)
-  PriceCalculator(Date current,Date timeIn) {
 
-    this.dayOut = current.today;
-    this.hourOut = current.hour;
-    this.beforeNoonOut = current.before_noon;
-    this.dayIn = timeIn.today;
-    this.hourIn = timeIn.hour;
-    this.beforeNoonIn = timeIn.before_noon;
-    
+  PriceCalculator(Date enter, Date exit) {
+    int counter = 0;
+    float cost = 0;
+
+    while (enter != exit) {
+
+      if (counter<60) {
+        enter.addMinute();
+        counter++;
+      } else if (counter==60) {
+        if (enter.today == 6) {
+          cost+=1.5;
+        } else {
+          cost+=3.0;
+        }
+        counter = 0;
+        enter.addMinute();
+      }
+    }
   }
-void CalcPrice(){
-if (dayIn == dayOut && beforeNoonOut == beforeNoonIn){
-  stallHour = hourOut - hourIn; 
-}
-}
-  
 }
