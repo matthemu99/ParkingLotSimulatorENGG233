@@ -2,9 +2,11 @@ class Time {
   int totalTime = 0;
   String day;
   int counter =0;
+  
   void addTime() {
     time.addMinute();
     day = time.toString();
+    text(day, 900, 30);
     println(day);
     println(totalTime);
   }
