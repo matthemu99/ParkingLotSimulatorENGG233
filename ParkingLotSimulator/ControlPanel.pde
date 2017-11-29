@@ -4,6 +4,13 @@
 class ControlPanel{
   
   
+  
+  
+void drawPanel(){
+  
+  
+}
+  
 
   
   
