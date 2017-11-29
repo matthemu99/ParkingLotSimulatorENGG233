@@ -39,7 +39,6 @@ void setup() {
   parkGate.closeGate();
 
   for (int i = 0, j =0; i < 60; i++, j-= 150) {
-    //cars = Arrays.copyOf(cars,cars.length +i);
     cars[i] = new Car(j + (int)random(1, 100)*-1, 1);
   }
   ///////////TEST AREA/////////////////////////
