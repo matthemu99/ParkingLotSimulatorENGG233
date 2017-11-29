@@ -11,8 +11,7 @@ Time clock;
 int totalTime;
 int timer = 0;
 int timeElapsed =0;
-Car car =new Car();
-int x;
+Car cars[] = new Car[60];
 
 //PriceCalculator cost;
 //etc... 
@@ -22,10 +21,7 @@ int x;
 void setup() {
   size(1100, 700);
   background(#059505);
-  strokeWeight(5);
-  stroke(255);
-  fill(#6A6C6C);
-  rect(150, 172.5, 800, 425);
+
   park = new ParkingLot();
   park.drawLot();
   southStreet = new Street("south");
@@ -36,14 +32,26 @@ void setup() {
   clock = new Time();
   parkGate = new Gate(78, 60);
   parkGate.closeGate();
+  for (int i = 0; i < 20; i++) {
+    cars[i] = new Car((int)random(1, 2000)*-1, 1);
+  }
 }
 
 void draw() {
- // northStreet.drawStreet();
+  rePaint();
+
   clock.addTime();
   clock.timeElapsed(timer++);
-  print(timeElapsed);
- car.x = x;
- // car.carDrive(x);
-  x++;
+
+  for (int i = 0; i< 20; i++) {
+    cars[i].moveCar();
+  }
+  
+  
+}
+void rePaint() {
+  background(#059505);
+  park.drawLot();
+  northStreet.drawStreet();
+  southStreet.drawStreet();
 }
