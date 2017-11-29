@@ -76,4 +76,5 @@ void rePaint() {
   northStreet.drawStreet();
   southStreet.drawStreet();
   panel.drawPanel();
+  parkGate.drawSign();
 }

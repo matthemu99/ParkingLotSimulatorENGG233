@@ -10,7 +10,13 @@ class Gate {
   Gate(float fee, int spaces) {
     this.fee = fee;
     this.spaces = spaces;
-    textSize(10);
+    
+  }
+
+
+void drawSign(){
+  
+  textSize(10);
     textAlign(LEFT);
     stroke (0);
 
@@ -31,10 +37,8 @@ class Gate {
     fill(0);
     text("EXIT", PosX-95, PosYN+428); 
     text("Fee = $" + fee, PosX-95, PosYN+443);
-  }
-
-
-
+  
+}
   void openGate() {
     status = true;
     strokeWeight(5);
