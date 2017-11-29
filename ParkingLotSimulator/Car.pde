@@ -16,9 +16,12 @@ class Car {
     g = random(0, 255);
     b = random(0, 255);
   }
-
   void moveCar() {
     this.x += this.speed;
+  }
+
+  void drawCar() {
+    moveCar(); 
     fill(r, g, b);
     stroke(0);
     strokeWeight(1);
