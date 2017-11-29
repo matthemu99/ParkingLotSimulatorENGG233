@@ -1,7 +1,7 @@
 // #Author: Matthew M.
 // #Author: Phillip M.
 //
-Date time = new Date (0,0,0,true);
+Date time = new Date (0, 0, 0, true);
 ParkingLot park;
 Street northStreet; 
 Street southStreet; 
@@ -11,7 +11,7 @@ Time clock;
 int totalTime;
 int timer = 0;
 int timeElapsed =0;
-Car car;
+Car car =new Car();
 int x;
 
 //PriceCalculator cost;
@@ -34,17 +34,16 @@ void setup() {
   northStreet.drawStreet();
   currentDate = new Date(0, 1, 0, true);
   clock = new Time();
-  parkGate = new Gate(78,60);
-   parkGate.closeGate();
+  parkGate = new Gate(78, 60);
+  parkGate.closeGate();
 }
 
 void draw() {
-  northStreet.drawStreet();
- clock.addTime();
- clock.timeElapsed(timer++);
- print(timeElapsed);
- car = new Car();
- car.carDrive(x);
- x++;
- 
+ // northStreet.drawStreet();
+  clock.addTime();
+  clock.timeElapsed(timer++);
+  print(timeElapsed);
+ car.x = x;
+ // car.carDrive(x);
+  x++;
 }
