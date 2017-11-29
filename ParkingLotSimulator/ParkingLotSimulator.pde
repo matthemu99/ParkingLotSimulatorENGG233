@@ -39,7 +39,7 @@ void setup() {
 
 void draw() {
   rePaint();
-
+parkGate.closeGate();
   clock.addTime();
   clock.timeElapsed(timer++);
 
