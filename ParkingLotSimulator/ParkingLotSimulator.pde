@@ -14,6 +14,8 @@ int timer = 0;
 int timeElapsed =0;
 Car cars[] = new Car[60];
 PriceCalculator cost;
+ControlPanel panel;
+
 
 
 ///////// TO BE DELETED!!/////////////
@@ -37,7 +39,7 @@ void setup() {
   clock = new Time();
   parkGate = new Gate(78, 60);
   parkGate.closeGate();
-
+  panel = new ControlPanel("");
   for (int i = 0, j =0; i < 60; i++, j-= 150) {
     cars[i] = new Car(j + (int)random(1, 100)*-1, 1);
   }
@@ -57,7 +59,7 @@ void draw() {
   parkGate.closeGate();
   clock.addTime();
   clock.timeElapsed(timer++);
-
+  panel = new ControlPanel(clock.day);
 
   for (int i = 0; i< 60; i++) {
     cars[i].drawCar();
@@ -73,4 +75,5 @@ void rePaint() {
   park.drawLot();
   northStreet.drawStreet();
   southStreet.drawStreet();
+  panel.drawPanel();
 }

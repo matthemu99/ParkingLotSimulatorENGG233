@@ -1,3 +1,4 @@
+
 class Time {
   int totalTime = 0;
   String day;
@@ -6,10 +7,10 @@ class Time {
   void addTime() {
     time.addMinute();
     day = time.toString();
-    fill(0);
-    text(day, 900, 30);
-    println(day);
-    println(totalTime);
+    
+   // fill(0);
+  //  text(day, 900, 30);
+
   }
 
 
