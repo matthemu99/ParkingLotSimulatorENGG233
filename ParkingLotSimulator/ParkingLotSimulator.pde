@@ -64,7 +64,7 @@ void draw() {
   for (int i = 0; i< 60; i++) {
     cars[i].drawCar();
     cars[i].moveCar();
-    cars[1].rotateCar();
+    //cars[1].rotateCar();
   }
 }
 
