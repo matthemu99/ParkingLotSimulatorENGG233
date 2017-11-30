@@ -60,7 +60,11 @@ int totalHours;
   
   if(mousePressed){
   if(mouseX>x2 && mouseX <x2+l && mouseY>y && mouseY <y+h){
-   println("mouse is pressed on pause"); 
+    textSize(50);
+    textAlign(CENTER);
+    fill(#FF2121);
+    text("Ain't no way to pause life sucker",550,400);
+    println("mouse is pressed on pause"); 
   }
   }
   }
