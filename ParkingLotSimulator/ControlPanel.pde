@@ -9,7 +9,7 @@ class ControlPanel {
   int l = 75;
   int h = 65;
   int totalHours;
-
+boolean pause;
 
   ControlPanel(String day, int totalHours) {
     this.display = day;
@@ -52,20 +52,37 @@ class ControlPanel {
 
     text(display, 900, 30);
 
-    if (mousePressed) {
+    if (mousePressed ) {
       if (mouseX>x1 && mouseX <x1+l && mouseY>y && mouseY <y+h) {
         println("mouse is pressed on play");
+        loop();
       }
     }
 
     if (mousePressed) {
       if (mouseX>x2 && mouseX <x2+l && mouseY>y && mouseY <y+h) {
-        textSize(50);
+        textSize(40);
         textAlign(CENTER);
         fill(#FF2121);
-        text("Ain't no way to pause life sucker", 550, 400);
+        text("Paused:", 550, 350);
+        text("click play or press the space bar to continue", 550, 400);
         println("mouse is pressed on pause");
+        noLoop();
       }
     }
+    
+    if (key == ' '){
+    pause = true;
+    }
+    if (pause==true){
+      textSize(40);
+        textAlign(CENTER);
+        fill(#FF2121);
+        text("Paused:", 550, 350);
+        text("click play or press the space bar to continue", 550, 400);
+        println("space bar has been pressed");
+        noLoop();
+    }
+    
   }
 }
