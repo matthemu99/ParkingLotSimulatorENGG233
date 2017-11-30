@@ -60,21 +60,7 @@ class ControlPanel {
     }
     */
 
-    if (mousePressed) {
-      if (mouseX>x2 && mouseX <x2+l && mouseY>y && mouseY <y+h) {
-        textSize(40);
-        textAlign(CENTER);
-        fill(#FF2121);
-        text("Paused:", 550, 350);
-        text("click play to continue", 550, 400);
-        println("mouse is pressed on pause");
-        noLoop();
-      }
-    }
-
-    if (key == ' ') {
-      pause = true;
-    }
+   
     /*if (pause==true) {
       textSize(40);
       textAlign(CENTER);

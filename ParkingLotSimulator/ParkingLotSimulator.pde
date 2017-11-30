@@ -15,7 +15,7 @@ int timeElapsed =0;
 Car cars[] = new Car[60];
 PriceCalculator cost;
 ControlPanel panel;
-boolean pause;
+
 
 
 ///////// TO BE DELETED!!/////////////
@@ -70,17 +70,31 @@ void draw() {
 
 void mousePressed() {
   int x1 = 475;
+  int x2 = 550;
   int y = 6;
   int l = 75;
   int h = 65;
+  
   if (mousePressed ) {
       if (mouseX>x1 && mouseX <x1+l && mouseY>y && mouseY <y+h) {
         println("mouse is pressed on play");
         loop();
       }
     }
+    
+     if (mousePressed) {
+      if (mouseX>x2 && mouseX <x2+l && mouseY>y && mouseY <y+h) {
+        textSize(40);
+        textAlign(CENTER);
+        fill(#FF2121);
+        text("Paused:", 550, 350);
+        text("click play to continue", 550, 400);
+        println("mouse is pressed on pause");
+        noLoop();
+      }
+    }
   
-  pause = true;
+  
 }
 
 
