@@ -15,7 +15,7 @@ int timeElapsed =0;
 Car cars[] = new Car[60];
 PriceCalculator cost;
 ControlPanel panel;
-
+boolean pause;
 
 
 ///////// TO BE DELETED!!/////////////
@@ -39,7 +39,7 @@ void setup() {
   clock = new Time();
   parkGate = new Gate(0, 60);
   parkGate.openGate();
-  panel = new ControlPanel("",0);
+  panel = new ControlPanel("", 0);
   for (int i = 0, j =0; i < 60; i++, j-= 150) {
     cars[i] = new Car(j + (int)random(1, 100)*-1, 1);
   }
@@ -68,7 +68,20 @@ void draw() {
   }
 }
 
-
+void mousePressed() {
+  int x1 = 475;
+  int y = 6;
+  int l = 75;
+  int h = 65;
+  if (mousePressed ) {
+      if (mouseX>x1 && mouseX <x1+l && mouseY>y && mouseY <y+h) {
+        println("mouse is pressed on play");
+        loop();
+      }
+    }
+  
+  pause = true;
+}
 
 
 
