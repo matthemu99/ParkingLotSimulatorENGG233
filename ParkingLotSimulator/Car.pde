@@ -22,9 +22,7 @@ class Car {
   
  
   void rotateCar(){
-        rotate(PI/2.0);
-
-    
+        rotate(PI/2.0); 
   }
   
   
