@@ -18,8 +18,8 @@ class Car {
   }
   void moveCar() {
     this.x += this.speed;
-    if (x >= 500) {
-      this.x =500;
+    if (x >= 535) {
+      this.x =535;
       this.y++;
       
       
