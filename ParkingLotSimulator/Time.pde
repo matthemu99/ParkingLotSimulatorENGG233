@@ -2,7 +2,7 @@
 class Time {
   int totalTime = 0;
   String day;
-  int counter =0;
+  int counter =40;
   
   void addTime() {
     time.addMinute();
@@ -15,7 +15,7 @@ class Time {
 
 
   void timeElapsed(int t) {
-    float increment = 1.5; 
+    float increment = 1; 
     if (t >= 40*increment) {
       if (counter == 60) {
         timeElapsed++;
