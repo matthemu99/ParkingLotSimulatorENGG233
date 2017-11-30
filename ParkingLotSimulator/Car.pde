@@ -20,10 +20,9 @@ class Car {
     this.x += this.speed;
   }
   
+ 
   void rotateCar(){
-    rotate(PI/2.0); 
-    
-    
+        rotate(PI/2.0); 
   }
   
   

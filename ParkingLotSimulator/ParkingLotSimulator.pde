@@ -64,15 +64,8 @@ void draw() {
   for (int i = 0; i< 60; i++) {
     cars[i].drawCar();
     cars[i].moveCar();
-         
-          if(cars[0].x >=500)
-          cars[0].rotateCar();
-
+    cars[1].rotateCar();
   }
-
-
-
-
 }
 
 
