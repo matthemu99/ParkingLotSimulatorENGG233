@@ -15,7 +15,6 @@ int timeElapsed =0;
 Car cars[] = new Car[60];
 PriceCalculator cost;
 ControlPanel panel;
-boolean pause;
 
 
 
@@ -59,16 +58,14 @@ void draw() {
   rePaint();
   parkGate.openGate();
   clock.addTime();
-  panel = new ControlPanel(clock.day, timeElapsed);
   clock.timeElapsed(timer++);
-  
+  panel = new ControlPanel(clock.day, timeElapsed);
 
   for (int i = 0; i< 60; i++) {
     cars[i].drawCar();
     cars[i].moveCar();
     cars[1].rotateCar();
   }
-  
 }
 
 

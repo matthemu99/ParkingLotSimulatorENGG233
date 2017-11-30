@@ -52,23 +52,17 @@ int totalHours;
     
     text(display, 900, 30);
     
-    //play
     if(mousePressed){
   if(mouseX>x1 && mouseX <x1+l && mouseY>y && mouseY <y+h){
    println("mouse is pressed on play"); 
-   pause = true;
-   loop();
   }
   }
   
-  //pause
   if(mousePressed){
   if(mouseX>x2 && mouseX <x2+l && mouseY>y && mouseY <y+h){
-    pause = false;
     textSize(50);
     textAlign(CENTER);
     fill(#FF2121);
-    noLoop();
     text("Ain't no way to pause life sucker",550,400);
     println("mouse is pressed on pause"); 
   }
