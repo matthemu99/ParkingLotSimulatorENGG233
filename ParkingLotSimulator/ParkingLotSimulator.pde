@@ -39,7 +39,7 @@ void setup() {
   clock = new Time();
   parkGate = new Gate(0, 60);
   parkGate.openGate();
-  panel = new ControlPanel("");
+  panel = new ControlPanel("",0);
   for (int i = 0, j =0; i < 60; i++, j-= 150) {
     cars[i] = new Car(j + (int)random(1, 100)*-1, 1);
   }
@@ -59,7 +59,7 @@ void draw() {
   parkGate.openGate();
   clock.addTime();
   clock.timeElapsed(timer++);
-  panel = new ControlPanel(clock.day);
+  panel = new ControlPanel(clock.day, timeElapsed);
 
   for (int i = 0; i< 60; i++) {
     cars[i].drawCar();

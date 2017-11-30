@@ -15,7 +15,7 @@ class Time {
 
 
   void timeElapsed(int t) {
-    float increment = 1; 
+    float increment = 1.5; 
     if (t >= 40*increment) {
       if (counter == 60) {
         timeElapsed++;
