@@ -64,6 +64,7 @@ void draw() {
   for (int i = 0; i< 60; i++) {
     cars[i].drawCar();
     cars[i].moveCar();
+    cars[i].dayIn = currentDate;
     fill(#6A6C6C);
     stroke(#6A6C6C);
     strokeWeight(0);
