@@ -6,7 +6,7 @@ class Car {
   float g ;
   float b;
   int toggle;
-
+  String date;
   int speed = 0;
   int x = 0;
   int y = 0;
@@ -24,16 +24,11 @@ class Car {
 
       this.x =540;
       this.y++;
+      if (y >= 35) {
+        y= 85;
+      }
     }
   }
-
-
-  void rotateCar() {
-
-    rotate(PI/2.0);
-  }
-
-
 
 
 

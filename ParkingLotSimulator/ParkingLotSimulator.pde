@@ -64,7 +64,10 @@ void draw() {
   for (int i = 0; i< 60; i++) {
     cars[i].drawCar();
     cars[i].moveCar();
-    //cars[1].rotateCar();
+    fill(#6A6C6C);
+    stroke(#6A6C6C);
+    strokeWeight(0);
+    rect(530, 176, 40, 100);
   }
 }
 
@@ -74,27 +77,25 @@ void mousePressed() {
   int y = 6;
   int l = 75;
   int h = 65;
-  
+
   if (mousePressed ) {
-      if (mouseX>x1 && mouseX <x1+l && mouseY>y && mouseY <y+h) {
-        println("mouse is pressed on play");
-        loop();
-      }
+    if (mouseX>x1 && mouseX <x1+l && mouseY>y && mouseY <y+h) {
+      println("mouse is pressed on play");
+      loop();
     }
-    
-     if (mousePressed) {
-      if (mouseX>x2 && mouseX <x2+l && mouseY>y && mouseY <y+h) {
-        textSize(40);
-        textAlign(CENTER);
-        fill(#FF2121);
-        text("Paused:", 550, 350);
-        text("click play to continue", 550, 400);
-        println("mouse is pressed on pause");
-        noLoop();
-      }
+  }
+
+  if (mousePressed) {
+    if (mouseX>x2 && mouseX <x2+l && mouseY>y && mouseY <y+h) {
+      textSize(40);
+      textAlign(CENTER);
+      fill(#FF2121);
+      text("Paused:", 550, 350);
+      text("click play to continue", 550, 400);
+      println("mouse is pressed on pause");
+      noLoop();
     }
-  
-  
+  }
 }
 
 
