@@ -6,11 +6,13 @@ class Car {
   float g ;
   float b;
   int toggle;
-  Date dayIn;
+  String dayIn;
+  Date dateIn;
   int speed = 0;
   int x = 0;
   int y = 0;
   boolean carIsParking = false;
+  int stopThat;
 
   Car(int x, int speed) {
     this.speed = speed;
@@ -21,6 +23,7 @@ class Car {
   }
   void moveCar(int doesCarPark) {
     this.x += this.speed;
+    // check if Lot is not full (boolean from gate)
     if ((x == 540 && doesCarPark >= 5 )|| carIsParking == true) {
       carIsParking = true;
       toggle = 1;
@@ -29,7 +32,22 @@ class Car {
       this.y++;
       if (y >= 35) {
         y= 85;
+        if(stopThat<1){
+        dayIn = clock.day;
+        println(dayIn);
+        //call ramdom stall and check if available (boolean)
+        //if available then make it occupied, else check another random stall
+        // set boolean in stall (for this car) to false
+        stopThat++;
+        
       }
+      }
+      //random function (1-40)
+      // if hoursIn == random then send hoursIn to priceCalculator
+      //change stall to available
+      //leave stall
+      
+      
     }
     
     

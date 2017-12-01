@@ -8,6 +8,7 @@ Street northStreet;
 Street southStreet; 
 Gate parkGate;
 Date currentDate;
+Date timeIn;
 Time clock;
 int totalTime;
 int timer = 0;
@@ -72,7 +73,7 @@ void draw() {
     int rand = (int)random(1, 10);
     cars[i].drawCar();
     cars[i].moveCar(rand);
-    cars[i].dayIn = currentDate;
+    //cars[i].dayIn = clock.day;
     fill(#6A6C6C);
     stroke(#6A6C6C);
     strokeWeight(0);
