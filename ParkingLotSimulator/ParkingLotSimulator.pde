@@ -68,9 +68,8 @@ void draw() {
 
 
 
-  int rand = 0;
   for (int i = 0; i< 60; i++) {
-    rand = (int)random(1, 10);
+    int rand = (int)random(1, 10);
     cars[i].drawCar();
     cars[i].moveCar(rand);
     cars[i].dayIn = currentDate;
