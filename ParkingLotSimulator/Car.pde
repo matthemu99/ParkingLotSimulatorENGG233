@@ -6,7 +6,6 @@ class Car {
   float g ;
   float b;
   int toggle;
-  String dayIn;
   Date dateIn;
   int speed = 0;
   int x = 0;
@@ -33,8 +32,8 @@ class Car {
       if (y >= 35) {
         y= 85;
         if(stopThat<1){
-        dayIn = clock.day;
-        println(dayIn);
+        dateIn = currentDate;
+        println(dateIn);
         //call ramdom stall and check if available (boolean)
         //if available then make it occupied, else check another random stall
         // set boolean in stall (for this car) to false

@@ -36,7 +36,8 @@ void setup() {
   northStreet= new Street("north");
   southStreet.drawStreet();
   northStreet.drawStreet();
-  currentDate = new Date(0, 1, 0, true);
+  //currentDate = new Date(0, 1, 0, true);
+  currentDate = time;
   clock = new Time();
   parkGate = new Gate(0, 60);
   parkGate.openGate();
@@ -59,6 +60,7 @@ void draw() {
   rePaint();
   clock.addTime();
   clock.timeElapsed(timer++);
+  currentDate = time;
   panel = new ControlPanel(clock.day, timeElapsed);
 
   if (parkGate.spaces <=60) {
