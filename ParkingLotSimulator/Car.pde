@@ -10,6 +10,8 @@ class Car {
   int speed = 0;
   int x = 0;
   int y = 0;
+  boolean carIsParking = false;
+
   Car(int x, int speed) {
     this.speed = speed;
     this.x = x;
@@ -17,9 +19,10 @@ class Car {
     g = random(0, 255);
     b = random(0, 255);
   }
-  void moveCar() {
+  void moveCar(int doesCarPark) {
     this.x += this.speed;
-    if (x >= 540) {
+    if ((x == 540 && doesCarPark >= 5 )|| carIsParking == true) {
+      carIsParking = true;
       toggle = 1;
 
       this.x =540;
@@ -28,7 +31,14 @@ class Car {
         y= 85;
       }
     }
+    
+    
+    
+    
+    
   }
+  
+  
 
 
 

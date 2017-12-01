@@ -56,14 +56,23 @@ void setup() {
 
 void draw() {
   rePaint();
-  parkGate.openGate();
   clock.addTime();
   clock.timeElapsed(timer++);
   panel = new ControlPanel(clock.day, timeElapsed);
 
+  if (parkGate.spaces <=60) {
+    parkGate.openGate();
+  } else {
+    parkGate.closeGate();
+  }
+
+
+
+  int rand = 0;
   for (int i = 0; i< 60; i++) {
+    rand = (int)random(1, 10);
     cars[i].drawCar();
-    cars[i].moveCar();
+    cars[i].moveCar(rand);
     cars[i].dayIn = currentDate;
     fill(#6A6C6C);
     stroke(#6A6C6C);
