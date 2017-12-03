@@ -10,13 +10,12 @@ class Gate {
   Gate(float fee, int spaces) {
     this.fee = fee;
     this.spaces = spaces;
-    
   }
 
 
-void drawSign(){
-  
-  textSize(10);
+  void drawSign() {
+
+    textSize(10);
     textAlign(LEFT);
     stroke (0);
 
@@ -27,7 +26,7 @@ void drawSign(){
     rect(PosX -100, PosYN-20, 92, 16);
     fill(0);
     text("ENTRANCE", PosX-95, PosYN-8); 
-    text("Space:  " + spaces, PosX-95, PosYN+8); 
+    text("Space:  " + (60 - spaces), PosX-95, PosYN+8); 
 
     strokeWeight(3);
     fill(#516AE0);
@@ -37,8 +36,7 @@ void drawSign(){
     fill(0);
     text("EXIT", PosX-95, PosYN+428); 
     text("Fee = $" + fee, PosX-95, PosYN+443);
-  
-}
+  }
   void openGate() {
     status = true;
     strokeWeight(5);
@@ -62,5 +60,26 @@ void drawSign(){
     ellipse(PosX, PosYN, 5, 5);
     fill(#11E000);
     ellipse(PosX, PosYS, 5, 5);
+  }
+
+
+  void lotAvailability () {
+    spaces = 0;
+    for (int i = 0; i < 2; i++ ) {
+      for (int j = 0; j< 3; j++) {
+        for (int i2 = 0; i2 < 5; i2++ ) {
+          for (int j2 = 0; j2< 2; j2++) {
+            if (park.sectionList[i][j].stallList[i2][j2].occupied == true) {
+              spaces++;
+            }
+          }
+        }
+      }
+    }
+    if (spaces==60) {
+      println("Parking Lot is full!");
+      //  lotFull = true;
+    }
+    println(spaces);
   }
 }

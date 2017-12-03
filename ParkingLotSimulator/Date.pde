@@ -33,16 +33,14 @@ class Date {
       before_noon = !before_noon;
       hour++;
       today++;
-    }
-      else if(hour == 11 && before_noon == true){
-        before_noon = !before_noon;
-        hour++;
-      }
-     else if (hour == 12) { 
+    } else if (hour == 11 && before_noon == true) {
+      before_noon = !before_noon;
+      hour++;
+    } else if (hour == 12) { 
       hour =1;
     }
     totalTime++;
-    if(today==7){
+    if (today==7) {
       today=0;
     }
   }

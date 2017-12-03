@@ -3,14 +3,13 @@ class Time {
   int totalTime = 0;
   String day;
   int counter =40;
-  
+
   void addTime() {
     time.addMinute();
     day = time.toString();
-    
-   // fill(0);
-  //  text(day, 900, 30);
 
+    // fill(0);
+    //  text(day, 900, 30);
   }
 
 

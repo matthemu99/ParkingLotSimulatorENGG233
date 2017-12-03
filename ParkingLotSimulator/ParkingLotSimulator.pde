@@ -17,8 +17,6 @@ Car cars[] = new Car[60];
 PriceCalculator cost;
 ControlPanel panel;
 
-
-
 ///////// TO BE DELETED!!/////////////
 
 Date date1 = new Date(2, 3, 3, true);
@@ -62,7 +60,7 @@ void draw() {
   clock.timeElapsed(timer++);
   currentDate = time;
   panel = new ControlPanel(clock.day, timeElapsed);
-
+  parkGate.lotAvailability();
   if (parkGate.spaces <=60) {
     parkGate.openGate();
   } else {
@@ -71,15 +69,20 @@ void draw() {
 
 
 
+
   for (int i = 0; i< 60; i++) {
     int rand = (int)random(1, 10);
     cars[i].drawCar();
     cars[i].moveCar(rand);
-    //cars[i].dayIn = clock.day;
+
     fill(#6A6C6C);
     stroke(#6A6C6C);
     strokeWeight(0);
     rect(530, 176, 40, 100);
+    if (cars[i].x >= width) {
+      cars[i].x = -1* ((int)random(300, 500) + i*150); 
+      ;
+    }
   }
 }
 

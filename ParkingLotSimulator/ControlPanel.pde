@@ -51,25 +51,25 @@ class ControlPanel {
     text("Pause", 560, 45);
 
     text(display, 900, 30);
-/*
+    /*
     if (mousePressed ) {
-      if (mouseX>x1 && mouseX <x1+l && mouseY>y && mouseY <y+h) {
-        println("mouse is pressed on play");
-        loop();
-      }
-    }
-    */
+     if (mouseX>x1 && mouseX <x1+l && mouseY>y && mouseY <y+h) {
+     println("mouse is pressed on play");
+     loop();
+     }
+     }
+     */
 
-   
+
     /*if (pause==true) {
-      textSize(40);
-      textAlign(CENTER);
-      fill(#FF2121);
-      text("Paused:", 550, 350);
-      text("click play or press the space bar to continue", 550, 400);
-      println("space bar has been pressed");
-      noLoop();
-    } 
-    */
-}
+     textSize(40);
+     textAlign(CENTER);
+     fill(#FF2121);
+     text("Paused:", 550, 350);
+     text("click play or press the space bar to continue", 550, 400);
+     println("space bar has been pressed");
+     noLoop();
+     } 
+     */
+  }
 }
