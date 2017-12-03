@@ -11,14 +11,14 @@ class Car {
   int x = 0;
   int y = 0;
   boolean carIsParking = false;
-  int stopThat = 0;
+  int stopThat;
   boolean isOccupied = false;
 
   int a; 
   int bx;
   int c; 
   int d;
-
+  
   Car(int x, int speed) {
     this.speed = speed;
     this.x = x;
@@ -38,8 +38,7 @@ class Car {
       if (y >= 35) {
         y= 85;
         if (stopThat<1) {
-          dateIn = currentDate;
-          println(dateIn);
+          
 
           a = (int) random(0, 2);
           bx = (int) random(0, 3);
@@ -57,19 +56,20 @@ class Car {
               d = (int)random(0, 2);
             }
           }
-
+          dateIn = currentDate;
+          println(dateIn);
           stopThat++;
         }
-        //////(**********((((*(*&(*&(*&(*&(&
-
+ //////(**********((((*(*&(*&(*&(*&(&
+        
         if ((int)random(0, 10000) < 5) {
           this. y= 500;
           park.sectionList[a][bx].stallList[c][d].occupied = false;
-          cost = new PriceCalculator (dateIn, currentDate);
-          println("dateIn = " + dateIn);
-          println("current Date = " +currentDate);
-          println( cost.calculateFee());
-          println("exiting");
+          println(dateIn);
+          println(time);
+  cost = new PriceCalculator (dateIn, time);
+  print( cost.calculateFee());
+          print("exiting");
         }
       }
 
