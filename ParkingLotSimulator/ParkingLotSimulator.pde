@@ -25,8 +25,14 @@ Date date2 = new Date(2, 6, 5, true);
 
 
 void setup() {
-  carAmount = Integer.parseInt(JOptionPane.showInputDialog("Please enter how many cars you want: "));
-  cars = new Car[carAmount];
+  try {
+    carAmount = Integer.parseInt(JOptionPane.showInputDialog("Please enter how many cars you want: "));
+    cars = new Car[carAmount];
+  }
+  catch (NumberFormatException e) {
+    System.err.println("Caught NumberFormatException: " + e.getMessage());
+    System.exit(0);
+  }
 
   size(1100, 700);
   background(#059505);
