@@ -11,11 +11,8 @@ class Car {
   int x = 0;
   int y = 0;
   boolean carIsParking = false;
-<<<<<<< HEAD
   int stopThat = 0;
-=======
-  int stopThat =0;
->>>>>>> 0edcd1facef3b822707784d3290f086c1063f260
+
   boolean isOccupied = false;
 
   int a; 
