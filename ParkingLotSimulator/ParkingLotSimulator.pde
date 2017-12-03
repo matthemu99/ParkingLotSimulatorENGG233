@@ -1,7 +1,6 @@
 // #Author: Matthew M.
 // #Author: Phillip M.
-
-import java.util.Arrays;
+import javax.swing.JOptionPane;
 Date time = new Date (0, 0, 0, true);
 ParkingLot park;
 Street northStreet; 
@@ -13,10 +12,11 @@ Time clock;
 int totalTime;
 int timer = 0;
 int timeElapsed =0;
-Car cars[] = new Car[60];
+Car cars[];
 PriceCalculator cost;
 ControlPanel panel;
-
+boolean lotFull;
+int carAmount;
 ///////// TO BE DELETED!!/////////////
 
 Date date1 = new Date(2, 3, 3, true);
@@ -25,6 +25,9 @@ Date date2 = new Date(2, 6, 5, true);
 
 
 void setup() {
+  carAmount = Integer.parseInt(JOptionPane.showInputDialog("Please enter how many cars you want: "));
+  cars = new Car[carAmount];
+
   size(1100, 700);
   background(#059505);
 
@@ -40,7 +43,7 @@ void setup() {
   parkGate = new Gate(0, 60);
   parkGate.openGate();
   panel = new ControlPanel("", 0);
-  for (int i = 0, j =0; i < 60; i++, j-= 150) {
+  for (int i = 0, j =0; i < carAmount; i++, j-= 150) {
     cars[i] = new Car(j + (int)random(1, 100)*-1, 1);
   }
   ///////////TEST AREA/////////////////////////
@@ -70,7 +73,7 @@ void draw() {
 
 
 
-  for (int i = 0; i< 60; i++) {
+  for (int i = 0; i< carAmount; i++) {
     int rand = (int)random(1, 10);
     cars[i].drawCar();
     cars[i].moveCar(rand);
