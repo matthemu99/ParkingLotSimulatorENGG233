@@ -18,8 +18,7 @@ class Car {
   int bx;
   int c; 
   int d;
-
-
+  
   Car(int x, int speed) {
     this.speed = speed;
     this.x = x;
@@ -66,7 +65,8 @@ class Car {
         if ((int)random(0, 10000) < 5) {
           this. y= 500;
           park.sectionList[a][bx].stallList[c][d].occupied = false;
-
+cost = new PriceCalculator (dateIn, currentDate);
+  print( cost.calculateFee());
           print("exiting");
         }
       }

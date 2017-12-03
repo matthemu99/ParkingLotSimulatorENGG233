@@ -13,7 +13,7 @@ class PriceCalculator {
 
   int counter =0;
   double calculateFee() {
-    while (enter.equal( exit) == false) {
+    while (enter.equal(exit) == false) {
 
       if (counter<60) {
         enter.addMinute();
