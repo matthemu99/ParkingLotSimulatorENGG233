@@ -11,7 +11,7 @@ class Car {
   int x = 0;
   int y = 0;
   boolean carIsParking = false;
-  int stopThat;
+  int stopThat =0;
   boolean isOccupied = false;
 
   int a; 
