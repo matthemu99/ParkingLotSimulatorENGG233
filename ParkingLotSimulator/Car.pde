@@ -14,6 +14,12 @@ class Car {
   int stopThat;
   boolean isOccupied = false;
 
+  int a; 
+  int bx;
+  int c; 
+  int d;
+
+
   Car(int x, int speed) {
     this.speed = speed;
     this.x = x;
@@ -36,29 +42,38 @@ class Car {
           dateIn = currentDate;
           println(dateIn);
 
-
-          int a = (int) random(0, 2);
-          int b = (int) random(0, 3);
-          int c = (int)random(0, 5);
-          int d = (int)random(0, 2);
+          a = (int) random(0, 2);
+          bx = (int) random(0, 3);
+          c = (int)random(0, 5);
+          d = (int)random(0, 2);
           while (isOccupied != true) {
-            if (park.sectionList[a][b].stallList[c][d].occupied != true) {
-              park.sectionList[a][b].stallList[c][d].setStatus(true, dateIn);
+            if (park.sectionList[a][bx].stallList[c][d].occupied != true) {
+              park.sectionList[a][bx].stallList[c][d].setStatus(true, dateIn);
               isOccupied =true;
               println(a, b, c, d);
             } else {
               a = (int) random(0, 2);
-              b = (int) random(0, 3);
+              bx = (int) random(0, 3);
               c = (int)random(0, 5);
               d = (int)random(0, 2);
             }
           }
-          //call ramdom stall and check if available (boolean)
-          //if available then make it occupied, else check another random stall
-          // set boolean in stall (for this car) to false
+
           stopThat++;
         }
+ //////(**********((((*(*&(*&(*&(*&(&
+        
+        if ((int)random(0, 10000) < 5) {
+          this. y= 500;
+          park.sectionList[a][bx].stallList[c][d].occupied = false;
+
+          print("exiting");
+        }
       }
+
+
+
+
       //random function (1-40)
       // if hoursIn == random then send hoursIn to priceCalculator
       //change stall to available
@@ -66,6 +81,7 @@ class Car {
     }
   }
   void leaveStall () {
+    // for (int i = 0; i < carAmount; i++;
   }
 
 

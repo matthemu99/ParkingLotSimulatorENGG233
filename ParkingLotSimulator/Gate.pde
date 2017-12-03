@@ -80,6 +80,5 @@ class Gate {
       println("Parking Lot is full!");
         lotFull = true;
     }
-    println(spaces);
   }
 }
