@@ -24,7 +24,7 @@ class Car {
   void moveCar(int doesCarPark) {
     this.x += this.speed;
     // check if Lot is not full (boolean from gate)
-    if ((x == 540 && doesCarPark >= 5 )|| carIsParking == true) {
+    if (((x == 540 && doesCarPark >= 5 )|| carIsParking == true )&& lotFull ==false) {
       carIsParking = true;
       toggle = 1;
 
