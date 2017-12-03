@@ -50,7 +50,7 @@ class ControlPanel {
     text("Play", 495, 45);
     text("Pause", 560, 45);
 
-    text(display, 900, 30);
+    text(display, 895, 30);
     /*
     if (mousePressed ) {
      if (mouseX>x1 && mouseX <x1+l && mouseY>y && mouseY <y+h) {
