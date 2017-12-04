@@ -17,6 +17,8 @@ PriceCalculator cost;
 ControlPanel panel;
 boolean lotFull;
 int carAmount;
+float netProfit =0;
+int customers =0;
 ///////// TO BE DELETED!!/////////////
 
 Date date1 = new Date(2, 3, 3, true);

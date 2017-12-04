@@ -41,9 +41,11 @@ class Car {
       this.x =540;
       this.y++;
       if (y >= 35 && y <450) {
+        
         y= 85;
+        
         if (stopThat<1) {
-
+customers++;
 
           a = (int) random(0, 2);
           bx = (int) random(0, 3);
@@ -81,6 +83,8 @@ class Car {
           println("current Date = " + currentDate);
           println( "fee is:" + cost.calculateFee());
           println("exiting");
+          parkGate.fee= (float)cost.calculateFee();
+          netProfit += parkGate.fee;
         }
       }
       if ( y >=550) {

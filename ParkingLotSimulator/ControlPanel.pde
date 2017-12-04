@@ -42,9 +42,9 @@ class ControlPanel {
 
     text("Simulation Values:", 705, 23);
     textSize(12);
-    text("Net Profits:", 705, 38);
+    text("Net Profits: $" + netProfit , 705, 38);
     text("Time Elapsed:       " + totalHours+  " Hours", 705, 52);
-    text("Customers:", 705, 66);
+    text("Customers: " + customers, 705, 66);
 
     textSize(20);
     text("Play", 495, 45);
