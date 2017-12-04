@@ -83,14 +83,13 @@ void draw() {
     int rand = (int)random(1, 10);
     cars[i].drawCar();
     cars[i].moveCar(rand);
-
     fill(#6A6C6C);
     stroke(#6A6C6C);
     strokeWeight(0);
     rect(530, 176, 40, 100);
-    if (cars[i].x >= width) {
+    if (cars[i].x >= width || ( cars[i].x >= width && cars[i].y == 445) ) {
       cars[i].x = -1* ((int)random(300, 500) + i*150); 
-      ;
+      cars[i].y = 0;
     }
   }
 }

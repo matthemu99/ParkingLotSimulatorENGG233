@@ -19,7 +19,7 @@ class Car {
   int bx;
   int c; 
   int d;
-  
+
   int today;
   int hour;
   int minute;
@@ -40,10 +40,10 @@ class Car {
 
       this.x =540;
       this.y++;
-      if (y >= 35) {
+      if (y >= 35 && y <450) {
         y= 85;
         if (stopThat<1) {
-          
+
 
           a = (int) random(0, 2);
           bx = (int) random(0, 3);
@@ -51,13 +51,13 @@ class Car {
           d = (int)random(0, 2);
           while (isOccupied != true) {
             if (park.sectionList[a][bx].stallList[c][d].occupied != true) {
-              
+
               today = currentDate.today;
               hour = currentDate.hour;
               minute = currentDate.minute;
               before_noon = currentDate.before_noon;
-              dateIn = new Date(today,hour,minute,before_noon);
-          println(dateIn);
+              dateIn = new Date(today, hour, minute, before_noon);
+              println(dateIn);
               park.sectionList[a][bx].stallList[c][d].setStatus(true, dateIn);
               isOccupied =true;
               println(a, b, c, d);
@@ -74,7 +74,7 @@ class Car {
         //////(**********((((*(*&(*&(*&(*&(&
 
         if ((int)random(0, 10000) < 5) {
-          this. y= 500;
+          this. y= 450;
           park.sectionList[a][bx].stallList[c][d].occupied = false;
           cost = new PriceCalculator (dateIn, currentDate);
           println("dateIn = " + dateIn);
@@ -83,8 +83,11 @@ class Car {
           println("exiting");
         }
       }
-
-
+      if ( y >=550) {
+        y=545;
+        toggle = 0;
+        carIsParking =false;
+      }
 
 
       //random function (1-40)
@@ -93,9 +96,9 @@ class Car {
       //leave stall
     }
   }
-  void leaveStall () {
-    // for (int i = 0; i < carAmount; i++;
-  }
+
+
+
 
 
 
