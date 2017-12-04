@@ -88,9 +88,22 @@ void draw() {
     strokeWeight(0);
     rect(530, 176, 40, 100);
     if (cars[i].x >= width || ( cars[i].x >= width && cars[i].y == 445) ) {
-      cars[i].x = -1* ((int)random(300, 500) + i*150); 
+      boolean gogo = true;
+      
+      for (int x=0;x<carAmount; x++){
+       
+        
+ if(cars[x].x < 0 && cars[i].x > -50){
+
+      
+      gogo = false;
+    }
+    }
+    if(gogo == true){
+      cars[i].x = -40; 
       cars[i].y = 0;
     }
+  }
   }
 }
 
