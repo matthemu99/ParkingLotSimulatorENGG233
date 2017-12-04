@@ -77,19 +77,19 @@ void draw() {
     strokeWeight(0);
     rect(530, 176, 40, 100);
     if (cars[i].x >= width || ( cars[i].x >= width && cars[i].y == 445) ) {
-      boolean gogo = true;
+      boolean respawn = true;
 
       for (int x=0; x<carAmount; x++) {
 
 
-        if (cars[x].x < 0 && cars[i].x > -50) {
+        if (cars[x].x < 0 && cars[i].x > -160) {
 
 
-          gogo = false;
+          respawn = false;
         }
       }
-      if (gogo == true) {
-        cars[i].x = -40; 
+      if (respawn == true) {
+        cars[i].x = (int)random(-130,-40); 
         cars[i].y = 0;
       }
     }
