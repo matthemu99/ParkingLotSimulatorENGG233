@@ -19,7 +19,11 @@ class Car {
   int bx;
   int c; 
   int d;
-
+  
+  int today;
+  int hour;
+  int minute;
+  boolean before_noon;
   Car(int x, int speed) {
     this.speed = speed;
     this.x = x;
@@ -39,8 +43,7 @@ class Car {
       if (y >= 35) {
         y= 85;
         if (stopThat<1) {
-          dateIn = currentDate;
-          println(dateIn);
+          
 
           a = (int) random(0, 2);
           bx = (int) random(0, 3);
@@ -48,6 +51,13 @@ class Car {
           d = (int)random(0, 2);
           while (isOccupied != true) {
             if (park.sectionList[a][bx].stallList[c][d].occupied != true) {
+              
+              today = currentDate.today;
+              hour = currentDate.hour;
+              minute = currentDate.minute;
+              before_noon = currentDate.before_noon;
+              dateIn = new Date(today,hour,minute,before_noon);
+          println(dateIn);
               park.sectionList[a][bx].stallList[c][d].setStatus(true, dateIn);
               isOccupied =true;
               println(a, b, c, d);
@@ -68,8 +78,8 @@ class Car {
           park.sectionList[a][bx].stallList[c][d].occupied = false;
           cost = new PriceCalculator (dateIn, currentDate);
           println("dateIn = " + dateIn);
-          println("current Date = " +currentDate);
-          println( cost.calculateFee());
+          println("current Date = " + currentDate);
+          println( "fee is:" + cost.calculateFee());
           println("exiting");
         }
       }

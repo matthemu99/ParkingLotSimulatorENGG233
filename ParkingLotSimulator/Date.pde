@@ -7,8 +7,15 @@ class Date {
   int hour;
   int minute;
   boolean before_noon;
+  int todayC;
+  int hourC;
+  int minuteC;
+  boolean before_noonC;
   Date(int d, int h, int m, boolean beforeNoon) {
-
+todayC = d;
+hourC = h;
+minuteC = m;
+before_noonC = beforeNoon;
     today =d%7;
     if ( h%12 ==0 && before_noon == false && m< 60) {
       hour = h;
