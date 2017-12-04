@@ -75,78 +75,95 @@ class Car {
         }
         //////(**********((((*(*&(*&(*&(*&(&
 
+
+
+
+
         if ((int)random(0, 10000) < 5) {
-          this. y= 450;
-          park.sectionList[a][bx].stallList[c][d].occupied = false;
-          cost = new PriceCalculator (dateIn, currentDate);
-          println("dateIn = " + dateIn);
-          println("current Date = " + currentDate);
-          println( "fee is:" + cost.calculateFee());
-          println("exiting");
-          parkGate.fee= (float)cost.calculateFee();
-          netProfit += parkGate.fee;
+          boolean canOut = true;
+          for (int x=0; x<carAmount; x++) {
+
+
+            if (cars[x].y < 490 && cars[x].y > 430 ) {
+
+
+              canOut = false;
+            }
+          }
+          if (canOut == true) {
+
+            this. y= 450;
+            park.sectionList[a][bx].stallList[c][d].occupied = false;
+            cost = new PriceCalculator (dateIn, currentDate);
+            println("dateIn = " + dateIn);
+            println("current Date = " + currentDate);
+            println( "fee is:" + cost.calculateFee());
+            println("exiting");
+            parkGate.fee= (float)cost.calculateFee();
+            netProfit += parkGate.fee;
+          }
         }
       }
-      if ( y >=550) {
-        y=545;
-        toggle = 0;
-        carIsParking =false;
+        if ( y >=550) {
+          y=545;
+          toggle = 0;
+          carIsParking =false;
+        }
+
+
+        //random function (1-40)
+        // if hoursIn == random then send hoursIn to priceCalculator
+        //change stall to available
+        //leave stall
       }
+    }
 
 
-      //random function (1-40)
-      // if hoursIn == random then send hoursIn to priceCalculator
-      //change stall to available
-      //leave stall
+
+
+
+
+
+
+
+
+    void drawCar() {
+      switch(toggle) {
+
+      default:
+        fill(r, g, b);
+        stroke(0);
+        strokeWeight(1);
+        rect(x, 103+y, 35, 25);
+        fill(#83D7F0);
+        rect(x+5, 108+y, 7, 15);
+        rect(x+20, 108+y, 7, 15);
+        fill(0);
+        line(x+5, 102+y, x+12, 102+y);
+        line(x+5, 129+y, x+12, 129+y);
+        line(x+20, 102+y, x+27, 102+y);
+        line(x+20, 129+y, x+27, 129+y);
+        fill(#FCFC1F);
+        ellipse(x+33, 110+y, 3, 3);
+        ellipse(x+33, 122+y, 3, 3);
+        break;
+      case 1:
+        fill(r, g, b);
+        stroke(0);
+        strokeWeight(1);
+        rect(x, 103+y, 25, 35);
+        fill(#83D7F0);
+        rect(x+5, 108+y, 15, 7);
+        rect(x+5, 123+y, 15, 7);
+        fill(0);
+        line(x-1, 108+y, x-1, 115+y);
+        line(x-1, 123+y, x-1, 130+y);
+        line(x+26, 108+y, x+26, 115+y);
+        line(x+26, 123+y, x+26, 130+y);
+        fill(#FCFC1F);
+        ellipse(x+7, y+136, 3, 3);
+        ellipse(x+19, 136+y, 3, 3);
+        break;
+      }
     }
   }
-
-
-
-
-
-
-
-
-
-
-  void drawCar() {
-    switch(toggle) {
-
-    default:
-      fill(r, g, b);
-      stroke(0);
-      strokeWeight(1);
-      rect(x, 103+y, 35, 25);
-      fill(#83D7F0);
-      rect(x+5, 108+y, 7, 15);
-      rect(x+20, 108+y, 7, 15);
-      fill(0);
-      line(x+5, 102+y, x+12, 102+y);
-      line(x+5, 129+y, x+12, 129+y);
-      line(x+20, 102+y, x+27, 102+y);
-      line(x+20, 129+y, x+27, 129+y);
-      fill(#FCFC1F);
-      ellipse(x+33, 110+y, 3, 3);
-      ellipse(x+33, 122+y, 3, 3);
-      break;
-    case 1:
-      fill(r, g, b);
-      stroke(0);
-      strokeWeight(1);
-      rect(x, 103+y, 25, 35);
-      fill(#83D7F0);
-      rect(x+5, 108+y, 15, 7);
-      rect(x+5, 123+y, 15, 7);
-      fill(0);
-      line(x-1, 108+y, x-1, 115+y);
-      line(x-1, 123+y, x-1, 130+y);
-      line(x+26, 108+y, x+26, 115+y);
-      line(x+26, 123+y, x+26, 130+y);
-      fill(#FCFC1F);
-      ellipse(x+7, y+136, 3, 3);
-      ellipse(x+19, 136+y, 3, 3);
-      break;
-    }
-  }
-}

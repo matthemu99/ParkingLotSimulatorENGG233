@@ -77,6 +77,7 @@ void draw() {
     strokeWeight(0);
     rect(530, 176, 40, 100);
     if (cars[i].x >= width || ( cars[i].x >= width && cars[i].y == 445) ) {
+
       boolean respawn = true;
 
       for (int x=0; x<carAmount; x++) {
@@ -89,6 +90,8 @@ void draw() {
         }
       }
       if (respawn == true) {
+                  cars[i] = new Car((int)random(1, 100)*-1, 1);////////////
+
         cars[i].x = (int)random(-130,-40); 
         cars[i].y = 0;
       }
