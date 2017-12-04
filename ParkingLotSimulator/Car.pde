@@ -41,11 +41,11 @@ class Car {
       this.x =540;
       this.y++;
       if (y >= 35 && y <450) {
-        
+
         y= 85;
-        
+
         if (stopThat<1) {
-customers++;
+          customers++;
 
           a = (int) random(0, 2);
           bx = (int) random(0, 3);

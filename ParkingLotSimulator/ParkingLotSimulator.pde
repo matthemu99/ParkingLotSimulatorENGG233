@@ -19,11 +19,6 @@ boolean lotFull;
 int carAmount;
 float netProfit =0;
 int customers =0;
-///////// TO BE DELETED!!/////////////
-
-Date date1 = new Date(2, 3, 3, true);
-Date date2 = new Date(2, 6, 5, true);
-/////////
 
 
 void setup() {
@@ -54,15 +49,7 @@ void setup() {
   for (int i = 0, j =0; i < carAmount; i++, j-= 150) {
     cars[i] = new Car(j + (int)random(1, 100)*-1, 1);
   }
-  ///////////TEST AREA/////////////////////////
 
-  cost = new PriceCalculator (date1, date2);
-  print( cost.calculateFee());
-
-
-
-
-  /////////////////////////////////////////////
 }
 
 void draw() {
@@ -91,21 +78,21 @@ void draw() {
     rect(530, 176, 40, 100);
     if (cars[i].x >= width || ( cars[i].x >= width && cars[i].y == 445) ) {
       boolean gogo = true;
-      
-      for (int x=0;x<carAmount; x++){
-       
-        
- if(cars[x].x < 0 && cars[i].x > -50){
 
-      
-      gogo = false;
+      for (int x=0; x<carAmount; x++) {
+
+
+        if (cars[x].x < 0 && cars[i].x > -50) {
+
+
+          gogo = false;
+        }
+      }
+      if (gogo == true) {
+        cars[i].x = -40; 
+        cars[i].y = 0;
+      }
     }
-    }
-    if(gogo == true){
-      cars[i].x = -40; 
-      cars[i].y = 0;
-    }
-  }
   }
 }
 
