@@ -58,7 +58,6 @@ void setup() {
 void draw() {
   rePaint();
   clock.addTime(timer++);
-  //clock.timeElapsed(timer++);
   currentDate = time;
   panel = new ControlPanel(clock.day, timeElapsed);
   parkGate.lotAvailability();
@@ -100,6 +99,18 @@ void draw() {
       }
     }
   }
+  /////Profit Anouncer
+  if (netProfit >= 100 && netProfit<=120) {
+    fill(#FF0505);
+    textSize(25);
+    text("Congradulations! Net Profit has hit $100!", 300, 323);
+  }
+  if (netProfit >= 500 && netProfit<=520) {
+    fill(#FF0505);
+    textSize(25);
+    text("Congradulations! Net Profit has hit $500!", 300, 323);
+  }
+  /////
 }
 
 void mousePressed() {
