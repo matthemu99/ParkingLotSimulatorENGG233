@@ -27,7 +27,6 @@ class Date {
   }
 
   void addHour() { 
-    timeElapsed++;
     if (  hour < 11 ) {
       hour++;
     } else if (hour == 11 && before_noon ==false) {
@@ -41,6 +40,7 @@ class Date {
       hour =1;
     }
     totalTime++;
+
     if (today==7) {
       today=0;
     }

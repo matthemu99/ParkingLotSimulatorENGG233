@@ -4,15 +4,21 @@
 class PriceCalculator {
   Date enter;
   Date exit;
-  float cost = 1.5;
+  float cost = 0;
 
   PriceCalculator(Date enter, Date exit) {
     this.enter = enter;
     this.exit = exit;
+    if (currentDate.today == 6) {
+      cost = 1.5;
+    } else {
+      cost = 3;
+    }
   }
 
   int counter =0;
   double calculateFee() {
+
     while (enter.equal(exit) == false) {
 
       if (counter<60) {

@@ -40,7 +40,8 @@ void setup() {
   northStreet= new Street("north");
   southStreet.drawStreet();
   northStreet.drawStreet();
-  time.hour = 12;
+  time.hour = 1;
+  //time.today = 6;
   //currentDate = new Date(0, 1, 0, true);
   currentDate = time;
   clock = new Time();
@@ -129,7 +130,8 @@ void mousePressed() {
 
 
 void rePaint() {
-  background(#059505);
+ // background(#059505);
+ background(clock.DayOrNight());
   park.drawLot();
   northStreet.drawStreet();
   southStreet.drawStreet();
