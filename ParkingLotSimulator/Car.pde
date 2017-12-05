@@ -90,10 +90,6 @@ class Car {
             this. y= 450;
             park.sectionList[a][bx].stallList[c][d].occupied = false;
             cost = new PriceCalculator (dateIn, currentDate);
-            println("dateIn = " + dateIn);
-            println("current Date = " + currentDate);
-            println( "fee is:" + cost.calculateFee());
-            println("exiting");
             parkGate.fee= (float)cost.calculateFee();
             netProfit += parkGate.fee;
           }

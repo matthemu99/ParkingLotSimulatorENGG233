@@ -1,6 +1,8 @@
 // #Author: Matthew M.
 // #Author: Phillip M.
+
 import javax.swing.JOptionPane;
+
 Date time = new Date (0, 0, 0, true);
 ParkingLot park;
 Street northStreet; 
@@ -23,7 +25,7 @@ int customers =0;
 
 void setup() {
   try {
-    carAmount = Integer.parseInt(JOptionPane.showInputDialog("Please enter how many cars you want: "));
+    carAmount = Integer.parseInt(JOptionPane.showInputDialog("Please enter how many cars you want circulating: \n(Integer #) "));
     cars = new Car[carAmount];
   }
   catch (NumberFormatException e) {
@@ -109,7 +111,7 @@ void mousePressed() {
 
   if (mousePressed ) {
     if (mouseX>x1 && mouseX <x1+l && mouseY>y && mouseY <y+h) {
-      println("mouse is pressed on play");
+
       loop();
     }
   }
@@ -121,7 +123,7 @@ void mousePressed() {
       fill(#FF2121);
       text("Paused:", 550, 350);
       text("click play to continue", 550, 400);
-      println("mouse is pressed on pause");
+
       noLoop();
     }
   }
@@ -130,8 +132,7 @@ void mousePressed() {
 
 
 void rePaint() {
- // background(#059505);
- background(clock.DayOrNight());
+  background(clock.dayOrNight());
   park.drawLot();
   northStreet.drawStreet();
   southStreet.drawStreet();

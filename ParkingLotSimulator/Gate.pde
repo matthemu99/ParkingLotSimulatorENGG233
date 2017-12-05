@@ -1,5 +1,6 @@
 // #Author: Matthew M.
 // #Author: Phillip M.
+
 class Gate {
   boolean status = false;
   int PosX = 530;
@@ -77,7 +78,6 @@ class Gate {
       }
     }
     if (spaces>=60) {
-      println("Parking Lot is full!");
       lotFull = true;
     }
   }
