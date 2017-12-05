@@ -58,10 +58,8 @@ class Car {
               minute = currentDate.minute;
               before_noon = currentDate.before_noon;
               dateIn = new Date(today, hour, minute, before_noon);
-              println(dateIn);
               park.sectionList[a][bx].stallList[c][d].setStatus(true, dateIn);
               isOccupied =true;
-              println(a, b, c, d);
             } else {
               a = (int) random(0, 2);
               bx = (int) random(0, 3);
