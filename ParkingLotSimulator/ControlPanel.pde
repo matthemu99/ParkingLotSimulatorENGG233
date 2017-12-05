@@ -2,14 +2,13 @@
 // #Author: Phillip M.
 
 class ControlPanel {
-  String display;
+  String display ;
   int x1 = 475;
   int x2 = 550;
   int y = 6;
   int l = 75;
   int h = 65;
   int totalHours;
-  //boolean pause;
 
   ControlPanel(String day, int totalHours) {
     this.display = day;
@@ -31,9 +30,6 @@ class ControlPanel {
     fill(#FF2121);
     rect(x2, y, l, h); // stop box
 
-
-
-
     fill(0);
     textAlign(LEFT);
     text("Parking Rates:", 25, 25);
@@ -42,7 +38,7 @@ class ControlPanel {
 
     text("Simulation Values:", 705, 23);
     textSize(12);
-    text("Net Profits:      \t$" + netProfit , 705, 38);
+    text("Net Profits:      \t$" + netProfit, 705, 38);
     text("Time Elapsed:    \t" + totalHours+  " Hours", 705, 52);
     text("Customers:        \t" + customers, 705, 66);
 
@@ -51,25 +47,5 @@ class ControlPanel {
     text("Pause", 560, 45);
 
     text(display, 895, 30);
-    /*
-    if (mousePressed ) {
-     if (mouseX>x1 && mouseX <x1+l && mouseY>y && mouseY <y+h) {
-     println("mouse is pressed on play");
-     loop();
-     }
-     }
-     */
-
-
-    /*if (pause==true) {
-     textSize(40);
-     textAlign(CENTER);
-     fill(#FF2121);
-     text("Paused:", 550, 350);
-     text("click play or press the space bar to continue", 550, 400);
-     println("space bar has been pressed");
-     noLoop();
-     } 
-     */
   }
 }

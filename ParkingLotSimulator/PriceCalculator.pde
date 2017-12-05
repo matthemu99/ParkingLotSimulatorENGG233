@@ -4,7 +4,7 @@
 class PriceCalculator {
   Date enter;
   Date exit;
-  int cost;
+  float cost = 1.5;
 
   PriceCalculator(Date enter, Date exit) {
     this.enter = enter;

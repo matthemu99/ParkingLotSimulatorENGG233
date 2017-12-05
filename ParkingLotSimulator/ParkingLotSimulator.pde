@@ -40,6 +40,7 @@ void setup() {
   northStreet= new Street("north");
   southStreet.drawStreet();
   northStreet.drawStreet();
+  time.hour = 12;
   //currentDate = new Date(0, 1, 0, true);
   currentDate = time;
   clock = new Time();
@@ -49,13 +50,12 @@ void setup() {
   for (int i = 0, j =0; i < carAmount; i++, j-= 150) {
     cars[i] = new Car(j + (int)random(1, 100)*-1, 1);
   }
-
 }
 
 void draw() {
   rePaint();
-  clock.addTime();
-  clock.timeElapsed(timer++);
+  clock.addTime(timer++);
+  //clock.timeElapsed(timer++);
   currentDate = time;
   panel = new ControlPanel(clock.day, timeElapsed);
   parkGate.lotAvailability();
@@ -90,9 +90,9 @@ void draw() {
         }
       }
       if (respawn == true) {
-                  cars[i] = new Car((int)random(1, 100)*-1, 1);////////////
+        cars[i] = new Car((int)random(1, 100)*-1, 1);
 
-        cars[i].x = (int)random(-130,-40); 
+        cars[i].x = (int)random(-130, -40); 
         cars[i].y = 0;
       }
     }

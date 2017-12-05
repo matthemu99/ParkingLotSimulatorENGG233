@@ -78,7 +78,7 @@ class Gate {
     }
     if (spaces>=60) {
       println("Parking Lot is full!");
-        lotFull = true;
+      lotFull = true;
     }
   }
 }
